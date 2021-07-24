@@ -18,6 +18,7 @@ C_SRCS += \
 ../SRC/DSP2833x_PieVect.c \
 ../SRC/DSP2833x_SysCtrl.c \
 ../SRC/DSP2833x_Xintf.c \
+../SRC/isr_timer.c \
 ../SRC/main.c 
 
 C_DEPS += \
@@ -28,6 +29,7 @@ C_DEPS += \
 ./SRC/DSP2833x_PieVect.d \
 ./SRC/DSP2833x_SysCtrl.d \
 ./SRC/DSP2833x_Xintf.d \
+./SRC/isr_timer.d \
 ./SRC/main.d 
 
 OBJS += \
@@ -41,6 +43,7 @@ OBJS += \
 ./SRC/DSP2833x_SysCtrl.obj \
 ./SRC/DSP2833x_Xintf.obj \
 ./SRC/DSP2833x_usDelay.obj \
+./SRC/isr_timer.obj \
 ./SRC/main.obj 
 
 ASM_DEPS += \
@@ -59,6 +62,7 @@ OBJS__QUOTED += \
 "SRC\DSP2833x_SysCtrl.obj" \
 "SRC\DSP2833x_Xintf.obj" \
 "SRC\DSP2833x_usDelay.obj" \
+"SRC\isr_timer.obj" \
 "SRC\main.obj" 
 
 C_DEPS__QUOTED += \
@@ -69,6 +73,7 @@ C_DEPS__QUOTED += \
 "SRC\DSP2833x_PieVect.d" \
 "SRC\DSP2833x_SysCtrl.d" \
 "SRC\DSP2833x_Xintf.d" \
+"SRC\isr_timer.d" \
 "SRC\main.d" 
 
 ASM_DEPS__QUOTED += \
@@ -89,6 +94,7 @@ C_SRCS__QUOTED += \
 "../SRC/DSP2833x_PieVect.c" \
 "../SRC/DSP2833x_SysCtrl.c" \
 "../SRC/DSP2833x_Xintf.c" \
+"../SRC/isr_timer.c" \
 "../SRC/main.c" 
 
 

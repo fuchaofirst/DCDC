@@ -20,6 +20,7 @@ ORDERED_OBJS += \
 "./SRC/DSP2833x_SysCtrl.obj" \
 "./SRC/DSP2833x_Xintf.obj" \
 "./SRC/DSP2833x_usDelay.obj" \
+"./SRC/isr_timer.obj" \
 "./SRC/main.obj" \
 "../CMD/28335_RAM_lnk.cmd" \
 "../CMD/DSP2833x_Headers_nonBIOS.cmd" \
@@ -133,42 +134,42 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-nihao2.out \
+DCDC_ZY.out \
 
 EXE_OUTPUTS__QUOTED += \
-"nihao2.out" \
+"DCDC_ZY.out" \
 
 BIN_OUTPUTS += \
-nihao2.hex \
+DCDC_ZY.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"nihao2.hex" \
+"DCDC_ZY.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "nihao2.out"
+	@$(MAKE) --no-print-directory -Onone "DCDC_ZY.out"
 
 # Tool invocations
-nihao2.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+DCDC_ZY.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/temp/program/CCSDSP/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"nihao2.map" --stack_size=0x300 --warn_sections -i"C:/temp/program/CCSDSP/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"C:/temp/program/CCSDSP/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="nihao2_linkInfo.xml" --rom_model -o "nihao2.out" $(ORDERED_OBJS)
+	"C:/temp/program/CCSDSP/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"DCDC_ZY.map" --stack_size=0x300 --warn_sections -i"C:/temp/program/CCSDSP/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"C:/temp/program/CCSDSP/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="DCDC_ZY_linkInfo.xml" --rom_model -o "DCDC_ZY.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-nihao2.hex: $(EXE_OUTPUTS)
+DCDC_ZY.hex: $(EXE_OUTPUTS)
 	@echo 'Building secondary target: "$@"'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/temp/program/CCSDSP/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/hex2000" --diag_wrap=off -o "nihao2.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/temp/program/CCSDSP/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/hex2000" --diag_wrap=off -o "DCDC_ZY.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "SRC\DSP2833x_ADC_cal.obj" "SRC\DSP2833x_CodeStartBranch.obj" "SRC\DSP2833x_CpuTimers.obj" "SRC\DSP2833x_DefaultIsr.obj" "SRC\DSP2833x_GlobalVariableDefs.obj" "SRC\DSP2833x_PieCtrl.obj" "SRC\DSP2833x_PieVect.obj" "SRC\DSP2833x_SysCtrl.obj" "SRC\DSP2833x_Xintf.obj" "SRC\DSP2833x_usDelay.obj" "SRC\main.obj" 
-	-$(RM) "SRC\DSP2833x_CpuTimers.d" "SRC\DSP2833x_DefaultIsr.d" "SRC\DSP2833x_GlobalVariableDefs.d" "SRC\DSP2833x_PieCtrl.d" "SRC\DSP2833x_PieVect.d" "SRC\DSP2833x_SysCtrl.d" "SRC\DSP2833x_Xintf.d" "SRC\main.d" 
+	-$(RM) "SRC\DSP2833x_ADC_cal.obj" "SRC\DSP2833x_CodeStartBranch.obj" "SRC\DSP2833x_CpuTimers.obj" "SRC\DSP2833x_DefaultIsr.obj" "SRC\DSP2833x_GlobalVariableDefs.obj" "SRC\DSP2833x_PieCtrl.obj" "SRC\DSP2833x_PieVect.obj" "SRC\DSP2833x_SysCtrl.obj" "SRC\DSP2833x_Xintf.obj" "SRC\DSP2833x_usDelay.obj" "SRC\isr_timer.obj" "SRC\main.obj" 
+	-$(RM) "SRC\DSP2833x_CpuTimers.d" "SRC\DSP2833x_DefaultIsr.d" "SRC\DSP2833x_GlobalVariableDefs.d" "SRC\DSP2833x_PieCtrl.d" "SRC\DSP2833x_PieVect.d" "SRC\DSP2833x_SysCtrl.d" "SRC\DSP2833x_Xintf.d" "SRC\isr_timer.d" "SRC\main.d" 
 	-$(RM) "SRC\DSP2833x_ADC_cal.d" "SRC\DSP2833x_CodeStartBranch.d" "SRC\DSP2833x_usDelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

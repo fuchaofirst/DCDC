@@ -1,6 +1,7 @@
 # FIXED
 
 SRC/main.obj: ../SRC/main.c
+SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/main.h
 SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/DSP2833x_Device.h
 SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/DSP2833x_Adc.h
 SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/DSP2833x_DevEmu.h
@@ -28,6 +29,8 @@ SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/DSP2833x_I2C_defines.h
 SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/DSP2833x_DefaultISR.h
 
 ../SRC/main.c:
+
+C:/temp/Download/nihao2/INCLUDE/main.h:
 
 C:/temp/Download/nihao2/INCLUDE/DSP2833x_Device.h:
 
