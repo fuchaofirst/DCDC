@@ -11,15 +11,18 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./SRC/DSP2833x_ADC_cal.obj" \
+"./SRC/DSP2833x_Adc.obj" \
 "./SRC/DSP2833x_CodeStartBranch.obj" \
 "./SRC/DSP2833x_CpuTimers.obj" \
 "./SRC/DSP2833x_DefaultIsr.obj" \
+"./SRC/DSP2833x_EPwm.obj" \
 "./SRC/DSP2833x_GlobalVariableDefs.obj" \
 "./SRC/DSP2833x_PieCtrl.obj" \
 "./SRC/DSP2833x_PieVect.obj" \
 "./SRC/DSP2833x_SysCtrl.obj" \
 "./SRC/DSP2833x_Xintf.obj" \
 "./SRC/DSP2833x_usDelay.obj" \
+"./SRC/EPwmSetup.obj" \
 "./SRC/isr_timer.obj" \
 "./SRC/main.obj" \
 "../CMD/28335_RAM_lnk.cmd" \
@@ -168,8 +171,8 @@ DCDC_ZY.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "SRC\DSP2833x_ADC_cal.obj" "SRC\DSP2833x_CodeStartBranch.obj" "SRC\DSP2833x_CpuTimers.obj" "SRC\DSP2833x_DefaultIsr.obj" "SRC\DSP2833x_GlobalVariableDefs.obj" "SRC\DSP2833x_PieCtrl.obj" "SRC\DSP2833x_PieVect.obj" "SRC\DSP2833x_SysCtrl.obj" "SRC\DSP2833x_Xintf.obj" "SRC\DSP2833x_usDelay.obj" "SRC\isr_timer.obj" "SRC\main.obj" 
-	-$(RM) "SRC\DSP2833x_CpuTimers.d" "SRC\DSP2833x_DefaultIsr.d" "SRC\DSP2833x_GlobalVariableDefs.d" "SRC\DSP2833x_PieCtrl.d" "SRC\DSP2833x_PieVect.d" "SRC\DSP2833x_SysCtrl.d" "SRC\DSP2833x_Xintf.d" "SRC\isr_timer.d" "SRC\main.d" 
+	-$(RM) "SRC\DSP2833x_ADC_cal.obj" "SRC\DSP2833x_Adc.obj" "SRC\DSP2833x_CodeStartBranch.obj" "SRC\DSP2833x_CpuTimers.obj" "SRC\DSP2833x_DefaultIsr.obj" "SRC\DSP2833x_EPwm.obj" "SRC\DSP2833x_GlobalVariableDefs.obj" "SRC\DSP2833x_PieCtrl.obj" "SRC\DSP2833x_PieVect.obj" "SRC\DSP2833x_SysCtrl.obj" "SRC\DSP2833x_Xintf.obj" "SRC\DSP2833x_usDelay.obj" "SRC\EPwmSetup.obj" "SRC\isr_timer.obj" "SRC\main.obj" 
+	-$(RM) "SRC\DSP2833x_Adc.d" "SRC\DSP2833x_CpuTimers.d" "SRC\DSP2833x_DefaultIsr.d" "SRC\DSP2833x_EPwm.d" "SRC\DSP2833x_GlobalVariableDefs.d" "SRC\DSP2833x_PieCtrl.d" "SRC\DSP2833x_PieVect.d" "SRC\DSP2833x_SysCtrl.d" "SRC\DSP2833x_Xintf.d" "SRC\EPwmSetup.d" "SRC\isr_timer.d" "SRC\main.d" 
 	-$(RM) "SRC\DSP2833x_ADC_cal.d" "SRC\DSP2833x_CodeStartBranch.d" "SRC\DSP2833x_usDelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

@@ -11,38 +11,47 @@ ASM_SRCS += \
 ../SRC/DSP2833x_usDelay.asm 
 
 C_SRCS += \
+../SRC/DSP2833x_Adc.c \
 ../SRC/DSP2833x_CpuTimers.c \
 ../SRC/DSP2833x_DefaultIsr.c \
+../SRC/DSP2833x_EPwm.c \
 ../SRC/DSP2833x_GlobalVariableDefs.c \
 ../SRC/DSP2833x_PieCtrl.c \
 ../SRC/DSP2833x_PieVect.c \
 ../SRC/DSP2833x_SysCtrl.c \
 ../SRC/DSP2833x_Xintf.c \
+../SRC/EPwmSetup.c \
 ../SRC/isr_timer.c \
 ../SRC/main.c 
 
 C_DEPS += \
+./SRC/DSP2833x_Adc.d \
 ./SRC/DSP2833x_CpuTimers.d \
 ./SRC/DSP2833x_DefaultIsr.d \
+./SRC/DSP2833x_EPwm.d \
 ./SRC/DSP2833x_GlobalVariableDefs.d \
 ./SRC/DSP2833x_PieCtrl.d \
 ./SRC/DSP2833x_PieVect.d \
 ./SRC/DSP2833x_SysCtrl.d \
 ./SRC/DSP2833x_Xintf.d \
+./SRC/EPwmSetup.d \
 ./SRC/isr_timer.d \
 ./SRC/main.d 
 
 OBJS += \
 ./SRC/DSP2833x_ADC_cal.obj \
+./SRC/DSP2833x_Adc.obj \
 ./SRC/DSP2833x_CodeStartBranch.obj \
 ./SRC/DSP2833x_CpuTimers.obj \
 ./SRC/DSP2833x_DefaultIsr.obj \
+./SRC/DSP2833x_EPwm.obj \
 ./SRC/DSP2833x_GlobalVariableDefs.obj \
 ./SRC/DSP2833x_PieCtrl.obj \
 ./SRC/DSP2833x_PieVect.obj \
 ./SRC/DSP2833x_SysCtrl.obj \
 ./SRC/DSP2833x_Xintf.obj \
 ./SRC/DSP2833x_usDelay.obj \
+./SRC/EPwmSetup.obj \
 ./SRC/isr_timer.obj \
 ./SRC/main.obj 
 
@@ -53,26 +62,32 @@ ASM_DEPS += \
 
 OBJS__QUOTED += \
 "SRC\DSP2833x_ADC_cal.obj" \
+"SRC\DSP2833x_Adc.obj" \
 "SRC\DSP2833x_CodeStartBranch.obj" \
 "SRC\DSP2833x_CpuTimers.obj" \
 "SRC\DSP2833x_DefaultIsr.obj" \
+"SRC\DSP2833x_EPwm.obj" \
 "SRC\DSP2833x_GlobalVariableDefs.obj" \
 "SRC\DSP2833x_PieCtrl.obj" \
 "SRC\DSP2833x_PieVect.obj" \
 "SRC\DSP2833x_SysCtrl.obj" \
 "SRC\DSP2833x_Xintf.obj" \
 "SRC\DSP2833x_usDelay.obj" \
+"SRC\EPwmSetup.obj" \
 "SRC\isr_timer.obj" \
 "SRC\main.obj" 
 
 C_DEPS__QUOTED += \
+"SRC\DSP2833x_Adc.d" \
 "SRC\DSP2833x_CpuTimers.d" \
 "SRC\DSP2833x_DefaultIsr.d" \
+"SRC\DSP2833x_EPwm.d" \
 "SRC\DSP2833x_GlobalVariableDefs.d" \
 "SRC\DSP2833x_PieCtrl.d" \
 "SRC\DSP2833x_PieVect.d" \
 "SRC\DSP2833x_SysCtrl.d" \
 "SRC\DSP2833x_Xintf.d" \
+"SRC\EPwmSetup.d" \
 "SRC\isr_timer.d" \
 "SRC\main.d" 
 
@@ -87,13 +102,16 @@ ASM_SRCS__QUOTED += \
 "../SRC/DSP2833x_usDelay.asm" 
 
 C_SRCS__QUOTED += \
+"../SRC/DSP2833x_Adc.c" \
 "../SRC/DSP2833x_CpuTimers.c" \
 "../SRC/DSP2833x_DefaultIsr.c" \
+"../SRC/DSP2833x_EPwm.c" \
 "../SRC/DSP2833x_GlobalVariableDefs.c" \
 "../SRC/DSP2833x_PieCtrl.c" \
 "../SRC/DSP2833x_PieVect.c" \
 "../SRC/DSP2833x_SysCtrl.c" \
 "../SRC/DSP2833x_Xintf.c" \
+"../SRC/EPwmSetup.c" \
 "../SRC/isr_timer.c" \
 "../SRC/main.c" 
 

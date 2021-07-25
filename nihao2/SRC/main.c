@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "EPwmSetUp.h"
 interrupt void ISRTimer0(void);  // interrupt for timer0
 void InitGPIO_LED(void);
 
@@ -85,6 +85,7 @@ void main(void)
     EINT;   // enable INTM
     ERTM;   // enable runtime Iner
     Defalut_InitLed_Staus();
+    EPwmSetup();// Pwmconfig
     while(1){
 
     }

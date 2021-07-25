@@ -27,6 +27,7 @@ SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/DSP2833x_ePwm_defines.h
 SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/DSP2833x_Dma_defines.h
 SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/DSP2833x_I2C_defines.h
 SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/DSP2833x_DefaultISR.h
+SRC/main.obj: C:/temp/Download/nihao2/INCLUDE/EPwmSetUp.h
 
 ../SRC/main.c:
 
@@ -81,4 +82,6 @@ C:/temp/Download/nihao2/INCLUDE/DSP2833x_Dma_defines.h:
 C:/temp/Download/nihao2/INCLUDE/DSP2833x_I2C_defines.h:
 
 C:/temp/Download/nihao2/INCLUDE/DSP2833x_DefaultISR.h:
+
+C:/temp/Download/nihao2/INCLUDE/EPwmSetUp.h:
 
